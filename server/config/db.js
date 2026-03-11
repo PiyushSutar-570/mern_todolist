@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const connectToDB = async() =>{
-    await mongoose.connect('mongodb+srv://andumandu6:andumandu6@cluster0.eh098m7.mongodb.net/todolist');
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("Database connected successfully !")
 }
 
